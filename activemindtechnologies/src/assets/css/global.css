@@ -1970,13 +1970,13 @@ div#mCSB_1_container{
   padding-right: 15px;
 }
 
-.header-style-two .main-menu .navigation > li > a:before{
+/*.header-style-two .main-menu .navigation > li > a:before{
   position: absolute;
   content: "\f107";
   font-family: 'Font Awesome 5 Pro';
   top: 40px;
   right: 0px;
-}
+}*/
 
 .header-style-two .search-box-outer .dropdown-menu{
 
