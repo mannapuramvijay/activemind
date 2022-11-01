@@ -1896,6 +1896,10 @@ Margin
 .mb_10 {
     margin-bottom: 10px;
 }
+.mb_250{
+    margin-bottom: -250px;
+    margin-left:-40rem;
+}
 .mb_11 {
     margin-bottom: 11px;
 }
