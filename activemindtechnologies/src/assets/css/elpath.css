@@ -1900,6 +1900,10 @@ Margin
     margin-bottom: -250px;
     margin-left:-40rem;
 }
+.mb_250ve{
+    margin-bottom: -250px;
+    margin-left:40rem;
+}
 .mb_11 {
     margin-bottom: 11px;
 }
