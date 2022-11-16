@@ -6,6 +6,8 @@ import { EmployeeComponent } from 'src/employee/employee.component';
 import { HomeComponent } from 'src/home/home.component';
 import { ServicesComponent } from 'src/services/services.component';
 import { TechComponent } from 'src/Technology/tech.component';
+import { TimesheetLoginComponent } from 'src/timesheetlogin/timesheet.component';
+import { TimesheetRegisterComponent } from 'src/timesheetsignup/timesheetregister.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent,pathMatch: 'full' },
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: 'contactus', component: ContactusComponent,pathMatch: 'full'},
   {path: 'tech', component: TechComponent,pathMatch: 'full'},
   {path: 'company', component: CompanyComponent,pathMatch: 'full'},
-  {path: 'employee', component: EmployeeComponent,pathMatch: 'full'}
+  {path: 'employee', component: EmployeeComponent,pathMatch: 'full'},
+  {path: 'timesheetlogin', component: TimesheetLoginComponent,pathMatch: 'full'},
+  {path: 'timesheetregister', component: TimesheetRegisterComponent,pathMatch: 'full'}
 ];
 
 @NgModule({

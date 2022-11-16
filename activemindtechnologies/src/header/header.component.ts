@@ -40,7 +40,7 @@ callCompany(){
 
 callEmployeePortal(){
   console.log("Company call");
-    this.router.navigate(['/employee']);
+    this.router.navigate(['/timesheetlogin']);
 }
 }
 
