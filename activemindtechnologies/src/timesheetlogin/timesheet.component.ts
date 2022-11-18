@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'services-root',
+  selector: 'timesheetlogin-root',
   templateUrl: './timesheet.component.html',
   styleUrls: ['./timesheet.component.css']
 })
 export class TimesheetLoginComponent implements OnInit {
   title = 'activemindtechnologies';
+  public email:string="";
+  public password:string="";
+  
   constructor( private router: Router) { }
 
   ngOnInit() {
@@ -26,6 +30,15 @@ export class TimesheetLoginComponent implements OnInit {
   goToRegister(){
     this.router.navigate(['/timesheetregister']);
    
+  }
+
+  goToDashboard(){
+    console.log('email='+this.email);
+    console.log('password='+this.password);
+   // alert('email='+this.email);
+    //if(this.email!='' && this.password!=''){
+    this.router.navigate(['/timesheetdashboard']);
+   // }
   }
   
 }

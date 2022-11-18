@@ -18,7 +18,7 @@
   <title>Login</title>
 </head>
 
-<body style="background-image: url('/assets/timesheet/img/bg-img.png'); width:100%; min-height: 100%; background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+<body >
     <div class="pace  pace-inactive">
         
         <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
@@ -36,10 +36,8 @@
           <div class="col-12 col-lg-4 mx-auto">
             <div class="card shadow rounded-5 overflow-hidden">
                   <div class="card-body p-4 p-sm-5">
-                    <h5 class="card-title">Sign In</h5>
-                    
+                    <h5 class="card-title" style="color:blue"><strong>Sign In</strong></h5>
                     <form class="form-body">
-                      
                       <div class="login-separater text-center mb-4"> 
                         <hr>
                       </div>
@@ -48,14 +46,14 @@
                             <label for="inputEmailAddress" class="form-label">Email Address</label>
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-envelope-fill"></i></div>
-                              <input type="email" class="form-control radius-30 ps-5" id="inputEmailAddress" placeholder="Email Address">
+                              <input type="email" value="{{email}}"   name="email" class="form-control radius-30 ps-5" id="inputEmailAddress" placeholder="Email Address">
                             </div>
                           </div>
                           <div class="col-12">
                             <label for="inputChoosePassword" class="form-label">Enter Password</label>
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-lock-fill"></i></div>
-                              <input type="password" class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password">
+                              <input type="password" required value={{password}} class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password">
                             </div>
                           </div>
                           <div class="col-6">
@@ -68,7 +66,7 @@
                           </div>
                           <div class="col-12">
                             <div class="d-grid">
-                              <button type="submit" class="btn btn-primary radius-30">Sign In</button>
+                              <button  class="btn btn-primary radius-30" (click)="goToDashboard()">Sign In</button>
                             </div>
                           </div>
                           <div class="col-12">
@@ -92,8 +90,4 @@
   <!--plugins-->
   <script src="./Snacked - Bootstrap 5 Admin Template_files/jquery.min.js.download"></script>
   <script src="./Snacked - Bootstrap 5 Admin Template_files/pace.min.js.download"></script>
-
-
-
-
 </body></html>

@@ -6,8 +6,10 @@ import { EmployeeComponent } from 'src/employee/employee.component';
 import { HomeComponent } from 'src/home/home.component';
 import { ServicesComponent } from 'src/services/services.component';
 import { TechComponent } from 'src/Technology/tech.component';
+import { TimesheetDetailsComponent } from 'src/timesheetdetails/timesheet_details.component';
 import { TimesheetLoginComponent } from 'src/timesheetlogin/timesheet.component';
 import { TimesheetRegisterComponent } from 'src/timesheetsignup/timesheetregister.component';
+import { TimesheetDashboardComponent } from 'src/timesheet_dashboard/timesheet_dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent,pathMatch: 'full' },
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'company', component: CompanyComponent,pathMatch: 'full'},
   {path: 'employee', component: EmployeeComponent,pathMatch: 'full'},
   {path: 'timesheetlogin', component: TimesheetLoginComponent,pathMatch: 'full'},
-  {path: 'timesheetregister', component: TimesheetRegisterComponent,pathMatch: 'full'}
+  {path: 'timesheetregister', component: TimesheetRegisterComponent,pathMatch: 'full'},
+  {path: 'timesheetdashboard', component: TimesheetDashboardComponent,pathMatch: 'full'},
+  {path: 'timesheetdetails', component: TimesheetDetailsComponent,pathMatch: 'full'}
 ];
 
 @NgModule({
