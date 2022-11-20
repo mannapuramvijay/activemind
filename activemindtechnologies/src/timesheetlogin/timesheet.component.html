@@ -37,7 +37,7 @@
             <div class="card shadow rounded-5 overflow-hidden">
                   <div class="card-body p-4 p-sm-5">
                     <h5 class="card-title" style="color:blue"><strong>Sign In</strong></h5>
-                    <form class="form-body">
+                    <form class="form-body" [formGroup]="signinform" (ngSubmit)="goToDashboard()">
                       <div class="login-separater text-center mb-4"> 
                         <hr>
                       </div>
@@ -46,14 +46,14 @@
                             <label for="inputEmailAddress" class="form-label">Email Address</label>
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-envelope-fill"></i></div>
-                              <input type="email" value="{{email}}"   name="email" class="form-control radius-30 ps-5" id="inputEmailAddress" placeholder="Email Address">
+                              <input type="email" formControlName="email"  [(ngModel)]="emailVar" name="email" class="form-control radius-30 ps-5" id="inputEmailAddress" placeholder="Email Address">
                             </div>
                           </div>
                           <div class="col-12">
                             <label for="inputChoosePassword" class="form-label">Enter Password</label>
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-lock-fill"></i></div>
-                              <input type="password" required value={{password}} class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password">
+                              <input type="password" required formControlName="password" [(ngModel)]="password" class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password">
                             </div>
                           </div>
                           <div class="col-6">
@@ -66,7 +66,7 @@
                           </div>
                           <div class="col-12">
                             <div class="d-grid">
-                              <button  class="btn btn-primary radius-30" (click)="goToDashboard()">Sign In</button>
+                              <button  type="submit" class="btn btn-primary radius-30" >Sign In</button>
                             </div>
                           </div>
                           <div class="col-12">

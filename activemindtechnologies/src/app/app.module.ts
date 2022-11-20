@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CompanyComponent } from 'src/company/company.component';
 import { ContactusComponent } from 'src/contactus/contactus.component';
@@ -12,7 +12,6 @@ import { TimesheetDetailsComponent } from 'src/timesheetdetails/timesheet_detail
 import { TimesheetLoginComponent } from 'src/timesheetlogin/timesheet.component';
 import { TimesheetRegisterComponent } from 'src/timesheetsignup/timesheetregister.component';
 import { TimesheetDashboardComponent } from 'src/timesheet_dashboard/timesheet_dashboard.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -36,7 +35,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

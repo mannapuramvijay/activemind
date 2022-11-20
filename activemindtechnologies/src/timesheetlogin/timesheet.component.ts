@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import {  Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'timesheetlogin-root',
@@ -9,10 +9,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class TimesheetLoginComponent implements OnInit {
   title = 'activemindtechnologies';
-  public email:string="";
+  public emailVar:string="";
   public password:string="";
+  public signinform = this.fb.group({
+    'email': [this.emailVar, Validators.email],
+    'password':[this.password, Validators.required]
+});
+  constructor( private router: Router,private fb:FormBuilder) { }
   
-  constructor( private router: Router) { }
 
   ngOnInit() {
     window.scroll({ 
@@ -33,12 +37,15 @@ export class TimesheetLoginComponent implements OnInit {
   }
 
   goToDashboard(){
-    console.log('email='+this.email);
-    console.log('password='+this.password);
+    console.log('email?'+this.signinform.get('email')?.value);
+    console.log('password='+this.signinform.get('password')?.value);
+    console.log("this.email=="+this.emailVar);
+    console.log("this.pwd=="+this.password);
+   // this.emailVar=this.signinform.get('email')?.value;
    // alert('email='+this.email);
-    //if(this.email!='' && this.password!=''){
+    if(this.emailVar!='' && this.password!=''){
     this.router.navigate(['/timesheetdashboard']);
-   // }
+   }
   }
   
 }
