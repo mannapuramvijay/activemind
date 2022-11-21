@@ -47,6 +47,14 @@
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-envelope-fill"></i></div>
                               <input type="email" formControlName="email"  [(ngModel)]="emailVar" name="email" class="form-control radius-30 ps-5" id="inputEmailAddress" placeholder="Email Address">
+                              <span class="text-danger" *ngIf="submitted && emailVar == ''">
+                                * Email is required
+                            </span>
+                            <span class="text-danger" *ngIf="submitted && emailVar!='' && !emailVar.includes('@') && !emailVar.includes('.') ">
+                              * Email format is not correct
+                          </span>
+                            
+                            
                             </div>
                           </div>
                           <div class="col-12">
@@ -54,6 +62,9 @@
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-lock-fill"></i></div>
                               <input type="password" required formControlName="password" [(ngModel)]="password" class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password">
+                              <span class="text-danger" *ngIf="submitted && password == ''">
+                              * Password is required
+                          </span>
                             </div>
                           </div>
                           <div class="col-6">

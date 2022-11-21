@@ -11,6 +11,7 @@ export class TimesheetLoginComponent implements OnInit {
   title = 'activemindtechnologies';
   public emailVar:string="";
   public password:string="";
+  public submitted:boolean =false;
   public signinform = this.fb.group({
     'email': [this.emailVar, Validators.email],
     'password':[this.password, Validators.required]
@@ -41,6 +42,7 @@ export class TimesheetLoginComponent implements OnInit {
     console.log('password='+this.signinform.get('password')?.value);
     console.log("this.email=="+this.emailVar);
     console.log("this.pwd=="+this.password);
+    this.submitted=true;
    // this.emailVar=this.signinform.get('email')?.value;
    // alert('email='+this.email);
     if(this.emailVar!='' && this.password!=''){
